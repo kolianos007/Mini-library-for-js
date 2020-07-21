@@ -1,3 +1,10 @@
 import './lib/lib'
+import $ from './lib/lib'
 
-$('.active').toggle()
+// $('.active').on('click', sayHello)
+$('button').on('click', function() {
+  $(this).toggleClass('active')
+})
+
+console.log(document.querySelectorAll('div'))
+

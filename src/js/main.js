@@ -3,8 +3,14 @@ import $ from './lib/lib'
 
 // $('.active').on('click', sayHello)
 $('button').on('click', function() {
-  $(this).toggleClass('active')
+  $('div').eq(2).toggleClass('active')
 })
 
-console.log(document.querySelectorAll('div'))
+$('div').click(function() {
+  console.log($(this).index())
+})
+
+console.log($('div').eq(2).find('.more'))
+
+// console.log($('button').html('xyi'))
 

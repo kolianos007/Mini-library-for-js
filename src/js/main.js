@@ -13,6 +13,31 @@ $('button').eq(2).on('click', () => {
   $('.w-500').fadeToggle(800)
 })
 
+$('#trigger').click(() => $('#trigger').createModal({
+  text: {
+    title: 'Modal title',
+    body: 'Lorem ipsum Lorem ipsuLorem ipsuLorem ipsuLorem ipsuLorem ipsuLorem ipsuLorem ipsu'
+  },
+  btns: {
+    count: 2,
+    settings: [
+      [
+        'Close',
+        ['btn-danger', 'mr-10'],
+        true
+      ], 
+      [
+        'Save changes',
+        ['btn-success'],
+        false,
+        () => {
+          alert('Data save')
+        }
+      ]
+    ]
+  }
+}))
+
 // $('.wrap').html(
 //   `
 //     <div class="dropdown">

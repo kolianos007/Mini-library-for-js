@@ -1,33 +1,26 @@
-import $ from '../core'
 
-$.prototype.addClass = function(...classNames) {
-  for (let i = 0; i < this.length; i++) {
-    if(this[i].classList == '') {
-      this[i].classList.add(...classNames)
+import $ from '../core';
+
+$.prototype.addClass = function(...classNames){
+    for (let i = 0; i < this.length; i++) {
+        this[i].classList.add(...classNames);
     }
-  }
 
-  return this
+    return this;
 };
 
-$.prototype.removeClass = function(...classNames) {
-  for (let i = 0; i < this.length; i++) {
-
-    if(this[i].classList != '') {
-      this[i].classList.remove(...classNames)
-    } else {
-      continue
+$.prototype.removeClass = function(...classNames){
+    for (let i = 0; i < this.length; i++) {
+        this[i].classList.remove(...classNames);
     }
-  }
 
-  return this
+    return this;
 };
 
-$.prototype.toggleClass = function(classNames) {
-  for (let i = 0; i < this.length; i++) {
-    this[i].classList.toggle(classNames)
-  }
+$.prototype.toggleClass = function(classNames){
+    for (let i = 0; i < this.length; i++) {
+        this[i].classList.toggle(classNames);
+    }
 
-  return this
+    return this;
 };
-
